@@ -31,6 +31,7 @@ DragSelect JS: Thibault Jan Beyer, https://thibaultjanbeyer.github.io/DragSelect
 Proper JS: ProperJS Org, https://popper.js.org/ .<br/>
 Materialize Framework: Alvin Wang, Kevin Louie, Alex Mark, Alan Chang, https://materializecss.com/ .<br/>
 Dropzone JS: Dropzone JS Foundation, https://www.dropzonejs.com/ .<br/>
+TinyFileManager : Tiny File Manger Owners , https://github.com/tinyfilemanager. <br/>
 
 ------------------------------------------
 Contact at kabeer11000@gmail.com if your name was not mentioned.
