@@ -18,5 +18,5 @@ define('APP_NAME', 'Your App Name Here');
 function siteURL(){return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://".$_SERVER['HTTP_HOST'];}
 define('SITE_URL',siteURL());
 function md5Content($data){return md5($data);}
-define('ADMIN_MD5_PASS',md5Content(constant('ADMIN_PASS'));
+define('ADMIN_MD5_PASS',md5Content(constant('ADMIN_PASS')));
 ?>
