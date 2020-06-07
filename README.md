@@ -34,8 +34,9 @@ Proper JS: ProperJS Org, https://popper.js.org/ .<br/>
 Materialize Framework: Alvin Wang, Kevin Louie, Alex Mark, Alan Chang, https://materializecss.com/ .<br/>
 Dropzone JS: Dropzone JS Foundation, https://www.dropzonejs.com/ .<br/>
 TinyFileManager : Tiny File Manger Owners , https://github.com/tinyfilemanager. <br/>
+Kabeers Network CSS Framework : Kabeers Network Owners , http://kabeersnetwork.dx.am/cdn. <br/>
 
 ------------------------------------------
-Contact at kabeer11000@gmail.com if your name was not mentioned.
+Email us at kabeer11000@gmail.com if your name was not mentioned.
 ------------------------------------------
 2020  Kabeers Network. All Rights Reserved
