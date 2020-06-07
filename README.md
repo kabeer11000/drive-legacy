@@ -23,7 +23,7 @@ Some Interesting Facts!
 ------------------------------------------
 Designed and developed by <a href="https://github.com/kabeer11000">Kabeer Jaffri</a>.
 ------------------------------------------
-Credits:
+<h3>Credits:</h3>
 
 Bootstrap Material Design : FEDERICO ZIVOLO, https://fezvrasta.github.io/ .<br/>
 JQuery JS : OpenJs Foundation, https://jquery.com/ .<br/>
