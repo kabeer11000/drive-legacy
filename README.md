@@ -1,6 +1,8 @@
 This is the Open Repo for: 
 # Kabeers Drive V2
 
+<img src="http://docs-kabeersnetwork-kview-app-sta.rf.gd/Private/uploads/5edd539a6f6d5---ezgif-3-84f7d3f080bc.gif">
+------------------------------------------
 1) First Open the file named SQL and Run it on your PHP My Admin Database.
 2) Then Open Config.php file and fill out the spaces.
 3) chmod all files between 644 - 777 and folders between 755 - 777.
