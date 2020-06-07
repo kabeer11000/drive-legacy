@@ -12,15 +12,22 @@ define('DB_NAME', 'Your Database Name');
 
 
 
+
+
+
 #-------------------------------------
 # DONT EDIT BELOW THIS LINE
 #-------------------------------------
 function siteURL(){
     return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://".$_SERVER['HTTP_HOST'];
 }
-define('SITE_URL',siteURL());
 function md5Content($data){
     return md5($data);
 }
+function hashContent($data){
+    return password_hash($data, PASSWORD_DEFAULT);
+}
+define('SITE_URL',siteURL());
 define('ADMIN_MD5_PASS', md5Content(constant('ADMIN_PASS')));
+define('ADMIN_HASH_PASS', hashContent(constant('ADMIN_PASS')));
 ?>
