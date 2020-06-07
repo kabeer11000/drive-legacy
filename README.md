@@ -19,7 +19,7 @@ Some Interesting Facts!
 
 
 ------------------------------------------
-Designed and developed by Kabeer Jaffri.
+Designed and developed by <a href="https://github.com/kabeer11000">Kabeer Jaffri</a>.
 ------------------------------------------
 Credits:
 
