@@ -1,0 +1,60 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+//------AUTHORIZATION--------//
+function auth()
+{
+	var USERNAME = "bugs";
+	var PASSWORD = "bugs";
+	$.ajax(
+	{
+		type: "GET",
+		url: "http://drive.hosted-kabeersnetwork.unaux.com/server/api/login.php",
+		dataType: 'json',
+		headers:
+		{
+			"Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
+		},
+		data: '',
+		success: function (data)
+		{
+		    console.log(data.id)
+			return data.id;
+		}
+	});
+}
+//------JAVASCRIPT EXAMPLE--------//
+/* MAIN FUNCTION TO UPLOAD STRING AS TEXT FILE TO SERVER */
+function UploadFile(data, folderid)
+{
+var formData = new FormData();
+//File Mime Type
+var blob = new Blob([data], { type: 'text/html' });
+//*IMPORTANT*. Kabeers Drive will only accept if paramenter name is 'file[]' (Array)
+formData.append('file[]', blob,'ggyt.html');
+var request = new XMLHttpRequest();
+request.open('POST', "http://drive.hosted-kabeersnetwork.unaux.com/server/api/upload/index.php?id=" + folderid);
+request.send(formData);
+    request.onreadystatechange = function (){
+    	if (request.readyState == 4 && request.status == 200){
+    		console.log("File uploaded!"+ this.response);
+    	}
+    }
+}
+
+var userid = auth();
+var text = '<html><center><h1>Kabeer Jaffri</h1></center></html>';
+//UserID is same as users "My Drive (Root)" folder Id
+UploadFile(text, userid);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+

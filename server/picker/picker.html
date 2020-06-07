@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+<script type="text/javascript">
+	for (var i = 0; i < 16; i++) {
+		document.body.innerHTML+="<h1>"+i+") Kabeer</h1>"
+	}
+</script>0
+
+<div class="full-width fixed-nav js-fixed-nav csebox" style="top: -80px;"><div class="fixed-nav-google-logo"><img src="/images/icon/google_logo_color.png" width="86px" height="28px" alt="google search"></div><div class="fixed-search"><div class="fixed-search-box"><form action="/search.php" class="fixed-search-box-form" method="GET" onsubmit="return q.value!=''" target="_blank"><input type="text" name="q" class="fixed-search-box-input" placeholder="Enter keywords, e.g. windows 10 media creation tool" title="Enter keywords, e.g. windows 10 media creation tool" autocomplete="off"><button type="submit" class="fixed-search-box-button"><span><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span></button></form></div></div></div>
+<script>$(".fixed-search-box-form").on("submit", function(){var sk = $(".fixed-search-box-input").val();BaseJS.popupBox.iframe( "/search.php?q=" + sk + "&t=single", 1000, 640 );return false;});</script>

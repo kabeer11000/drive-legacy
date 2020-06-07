@@ -1,0 +1,22 @@
+{
+    "name": "Kabeer's Drive",
+    "short_name": "Drive",
+    "description": "Free Cloud Storageyou can use with all your devices!",
+    "icons": [
+        {
+            "src": "../.././images/kslogo.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        // ...
+        {
+            "src": "../.././images/kslogo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "../../index.php",
+    "display": "fullscreen",
+    "theme_color": "#1EA296",
+    "background_color": "#FAFAFA"
+}

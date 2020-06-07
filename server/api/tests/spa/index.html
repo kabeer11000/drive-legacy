@@ -1,0 +1,73 @@
+
+<!-- Include Handlebars from a CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+<div id="view"></div>
+
+<script id="document-template" type="text/x-handlebars-template">
+<div class="container people_list">
+    <div class="row d-flex justify-content-center align-items-center">
+  {{#each Files}}
+    <div class="d-block col-md-2 card mx-2 my-2" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+      </div>
+      <div class="card-footer">
+        <a href="{{this.path}}" class="text-left card-link">Open</a>
+        <a href="http://drive.hosted-kabeersnetwork.unaux.com/?file={{this.id}}" class="text-right card-link">locate</a>
+      </div>
+    </div>
+  {{/each}}
+    </div>
+</div>
+</script>
+
+<script>
+function auth(){
+            var USERNAME = "cid";
+            var PASSWORD = "cid";
+            $.ajax
+            ({
+              type: "GET",
+              url: "http://drive.hosted-kabeersnetwork.unaux.com/server/api/login.php",
+              dataType: 'json',
+              headers: {
+                "Authorization": "Basic " + btoa(USERNAME + ":" + PASSWORD)
+              },
+              data: '',
+              success: function (data){
+              sessionStorage.auth = "true";
+              // AUTHORIZED
+              console.log("authoirzed");
+    
+              }
+      });
+}
+function getFiles() {
+var data1;
+    $.ajax({
+              type: "GET",
+              url: "http://drive.hosted-kabeersnetwork.unaux.com/server/api/my-drive.php",
+              data: '',
+              success: function (data){
+                  data1 = data;
+              }
+      });
+      return data1;
+}
+function getFilesFake(){
+    return {"TotalResults":15,"Files":[{"name":"kslogo.jpg","size":"293800","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/64d077b062dce15c999531da30c8b1e371279107009e96e1039715cfc320523fkslogo.jpg","shared":"0","mime":"image\/jpeg","id":"71279107009e96e1039715cfc320523f"},{"name":"cdn.html","size":"40979","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/7793301face3befdff296160a4a64074cd6184d88814297c6725f20ce0efb461cdn.html","shared":"0","mime":"text\/html","id":"cd6184d88814297c6725f20ce0efb461"},{"name":"background-circle-color.png","size":"117708","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/c529eda6dc53fca50f8bd9819e7cba12b59830806202d137de99c8582b02a7ebbackground-circle-color.png","shared":"0","mime":"image\/png","id":"b59830806202d137de99c8582b02a7eb"},{"name":"developer.html","size":"962","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/38d91efe2ddd382d1bab94d9448cdcaeda40b1b80dfb3a1151bdaec532b730f5developer.html","shared":"0","mime":"text\/html","id":"da40b1b80dfb3a1151bdaec532b730f5"},{"name":"developer.php","size":"1486","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/60c05bec52a41d2da32b65677a3a11b7bf324e82cd5175d0e2d75e82977fd2c8developer.php","shared":"0","mime":"text\/html","id":"bf324e82cd5175d0e2d75e82977fd2c8"},{"name":"docseditor.html","size":"18349","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/7fa2dbff7f05e93814fa42041e24684a88e71562106173f4edc3171627448298docseditor.html","shared":"0","mime":"text\/html","id":"88e71562106173f4edc3171627448298"},{"name":"fatima.html","size":"296","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/e2dd74e4fb80f715481b0e0b1d953da01c38c0373af5ab956701bc65c51adfbcfatima.html","shared":"0","mime":"text\/html","id":"1c38c0373af5ab956701bc65c51adfbc"},{"name":"fatima.js","size":"92","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/00474771ede082021eee6e4c4ddc65efc68ce42a617c3996b571dd9f1e5f97cefatima.js","shared":"0","mime":"text\/plain","id":"c68ce42a617c3996b571dd9f1e5f97ce"},{"name":"footer.php","size":"2883","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/6fb7ab4c1b8a99dd331b9add0619559ea42141e767a317afb99490afc3e3ebe6footer.php","shared":"0","mime":"text\/html","id":"a42141e767a317afb99490afc3e3ebe6"},{"name":"first.mp4","size":"213424","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/b41b0f5653129b6a7c06017a589a2081ba75194702b15dcedc44e0f94ae6e5befirst.mp4","shared":"0","mime":"video\/mp4","id":"ba75194702b15dcedc44e0f94ae6e5be"},{"name":"fuulbg.svg","size":"7145","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/aeb6c50a83982369548e14cc429ca0697c9d284317876f192cb74ad435225817fuulbg.svg","shared":"0","mime":"image\/svg","id":"7c9d284317876f192cb74ad435225817"},{"name":"header.php","size":"1612","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/da9fc74510b49947a6b5a23e41f3247ed01c81181fabe95da7eeac423cc0ade1header.php","shared":"0","mime":"text\/html","id":"d01c81181fabe95da7eeac423cc0ade1"},{"name":"gg.html","size":"127059","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/456c80646bd6294aa39abd6b073cd28b23482ab9c00556869ca2b6528928e4efgg.html","shared":"0","mime":"text\/html","id":"23482ab9c00556869ca2b6528928e4ef"},{"name":"hero1.svg","size":"14114","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/acd3391f041b41b7f31baad386e529f4c83905ff8e1ad55732029f6e3b0ed268hero1.svg","shared":"0","mime":"image\/svg","id":"c83905ff8e1ad55732029f6e3b0ed268"},{"name":"hero2.svg","size":"10186","path":"http:\/\/drive.hosted-kabeersnetwork.unaux.com\/user-files\/a1f58febb642ff9a60875334526996c8c8fbdd7f11283cb893fd0cd475806c78hero2.svg","shared":"0","mime":"image\/svg","id":"c8fbdd7f11283cb893fd0cd475806c78"}]}; 
+}
+console.log(getFiles());
+$(document).ready(function(){
+    var source = $("#document-template").html();
+    var template = Handlebars.compile(source);
+    var html = template(getFilesFake());
+    $('#view').html((html));
+})
+
+
+
+
+</script>

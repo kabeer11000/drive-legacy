@@ -1,0 +1,97 @@
+main::-webkit-scrollbar {
+  width: 0.5em;
+  border-radius:20px
+}
+ 
+main::-webkit-scrollbar-track {
+  //box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color:#EEE
+}
+ 
+main::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.scrollmenu::-webkit-scrollbar {
+  width: 0.5em;
+  height:0em;
+  border-radius:20px
+}
+.scrollmenu::-webkit-scrollbar-track {
+  //box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color:#EEE
+}
+ 
+.scrollmenu::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+main{z-index: 1}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ -webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+    
+}
+.ds-selected .mdc-card{
+    border-style:solid;
+    border-width:1px;
+    border-color:#009688;
+}
+.scrollmenu .ds-selected{
+    border-style:solid;
+    border-width:1px;
+    border-color:#009688!important;
+    outline:1px;
+}
+#menuUl {
+display:none;
+position: absolute;
+margin-bottom:0;
+z-index:9999999;
+}@media(min-width:1024px){
+    //.mdc-card__actions{
+        display:none
+    }
+    .pc-link-dropdown{
+        display:block;
+    }
+}
+.demo-card__title{
+    padding-left:1rem
+}
+.minusTop{
+    margin-bottom:2.5rem;
+.mdc-card__media,  .demo-card__media{
+ object-fit: fill;
+ }
+ .file {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+::-moz-selection { /* Code for Firefox */
+  background: transparent;
+}
+
+::selection {
+  background: red;
+}
+.hide{
+   display:none!important;
+}
+a{text-decoration:none!important}
+.optimize-covid-banner{background-color:#1967d2;font-size:18px;font-weight:500;line-height:24px;padding:24px 0;position:relative;text-align:center;z-index:5000000}.optimize-covid-banner>h1{color:#e5e5e5;font-weight:bold;font-size:22px;margin:0 0 0 56px;position:absolute}.optimize-covid-banner>p{color:#e8f0fe;margin:0 16px}.optimize-covid-banner>p>a{color:inherit;padding:0 4px}.optimize-covid-banner>p>button{background-color:transparent;border:0;color:inherit;cursor:pointer;float:right;font-size:24px;height:32px;width:32px;position:absolute;top:0;right:0}@media(max-width:1280px){.optimize-covid-banner>h1{position:static;font-size:18px;line-height:28px;margin:0 16px}}
+a{text-decoration: none!important;}.show{border-radius:5px;box-shadow:none;border:1px #E6E6E6 solid}
+
+
+.round{border-radius:50%}.fab{-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;width:56px;height:56px;background-color:#0f9c8f;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;position:fixed;right:12.5px;bottom:15px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;//cursor:pointer;color:#FFF;font-size:2em;box-shadow:0 3px 10px rgba(0,0,0,0.16),0px 3px 10px rgba(0,0,0,0.16)}.fab i{-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;will-change:transform}.inner-fabs .fab{width:40px;height:40px;right:20px;bottom:23px;font-size:1.5em;z-index:99999;will-change:bottom}.inner-fabs.show .fab:nth-child(1){bottom:80px}.inner-fabs.show .fab:nth-child(2){bottom:130px}.inner-fabs.show .fab:nth-child(3){bottom:180px}.inner-fabs.show .fab:nth-child(4){bottom:230px}.inner-fabs.show .fab:nth-child(5){bottom:280px}.inner-fabs.show .fab:nth-child(6){bottom:330px}.inner-fabs.show+.fab i{-webkit-transform:rotate(135deg);transform:rotate(135deg)}.fab:before{content:attr(data-tooltip);-webkit-transition:opacity 150ms cubic-bezier(0.4,0,1,1);transition:opacity 150ms cubic-bezier(0.4,0,1,1);position:absolute;visibility:hidden;opacity:0;box-shadow:0 1px 2px rgba(0,0,0,0.15);color:#ececec;right:50px;top:25%;background-color:rgba(70,70,70,0.9);font-size:.5em;line-height:1em;display:inline-block;text-align:center;white-space:nowrap;border-radius:2px;padding:6px 8px;max-width:200px;font-weight:bold;text-overflow:ellipsis;vertical-align:middle}.inner-fabs.show .fab:hover:before{content:attr(data-tooltip);visibility:visible;opacity:1}

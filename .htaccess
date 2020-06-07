@@ -1,0 +1,87 @@
+Header Set Access-Control-Allow-Origin "*"
+Options -Indexes
+#RewriteEngine on
+ # RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost/k-drive/ [NC]
+ # RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost/k-drive/.*$ [NC]
+ # RewriteRule \.(mp4|avi|ogg)$ - [F]
+ #
+ # RewriteEngine On
+ # RewriteBase /
+ # RewriteCond %{REQUEST_FILENAME} !-f
+ # RewriteRule "^(.+)favicon\.ico(|\?.+)$"  "/images/kslogo.png" [PT]
+
+#TODO UNCOMMENT ONLY WHEN UPLOADING ON SERVER
+<ifmodule mod_rewrite.c>
+ RewriteCond %{REQUEST_URI} !^/favicon\.ico [NC]
+ RewriteCond %{REQUEST_URI} favicon\.ico    [NC]
+ RewriteRule (.*) favicon.ico [R=301,L]
+ </ifmodule>
+ <ifmodule mod_rewrite.c>
+ RewriteCond %{REQUEST_URI} !^/images/ajax\-loader\.gif [NC]
+ RewriteCond %{REQUEST_URI} ajax\-loader\.gif           [NC]
+ RewriteRule (.*) favicon.ico [R=301,L]
+ </ifmodule>
+ RewriteEngine on
+ RewriteCond %{HTTP_REFERER} !^http://(drive\.)?hosted-kabeersnetwork.unaux.com/ [NC]
+ RewriteCond %{HTTP_REFERER} !^http://(drive\.)?hosted-kabeersnetwork.unaux.com/.*$ [NC]
+ #RewriteRule \.(mp4|avi|ogg)$ - [F]
+
+#Header set Access-Control-Allow-Origin: *
+
+
+ #RewriteEngine On
+   #
+   # # browser requests PHP
+   # RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+   # RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+   #
+   # # check to see if the request is for a PHP file:
+   # RewriteCond %{REQUEST_FILENAME}\.php -f
+   # RewriteRule ^/?(.*)$ /$1.php [L]#
+RewriteCond %{HTTP_USER_AGENT} (googlebot|yahoo|bingbot|baiduspider) [NC]
+RewriteRule ^(.*)$ http://kabeersdrive.ueuo.com/$1 [R=301,L]
+	
+ErrorDocument 404 /server/errors/
+ErrorDocument 403 /server/errors/
+ErrorDocument 502 /server/errors/
+
+#gzipon;
+#gzip_comp_level2;
+#gzip_http_version1.0;
+#gzip_proxied any;
+#gzip_min_length1100;
+#gzip_buffers168k;
+#gzip_types text/plain text/html text/css application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+#gzip_disable"MSIE [1-6].(?!.*SV1)";
+#gzip_varyon;
+
+# One month for most static assets
+<filesMatch ".(css|html|jpeg|png|gif|js|ico)$">
+#Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
+<IfModule mod_rewrite.c>
+#	RewriteEngine On
+#	RewriteCond %{QUERY_STRING} file=$1
+#	RewriteRule (.*)  $1
+</IfModule>
+#Options +FollowSymLinks
+#RewriteEngine On
+ 
+#RewriteCond %{SCRIPT_FILENAME} !-d
+#RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+#RewriteRule ^(.*)$ ./index.php?file=$1
+
+
+RewriteEngine On
+
+# browser requests PHP
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+#RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+# check to see if the request is for a PHP file:
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^/?(.*)$ /$1.php [L]
+
+
